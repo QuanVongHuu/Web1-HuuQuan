@@ -8,6 +8,15 @@
 </head>
 
 <body>
+    <div id="menu-container"></div>      
+        <script>
+            fetch('index.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            })
+            .catch(error => console.error('Lỗi khi tải menu:', error));
+        </script>
 
     <div align="center">
         <img src="./hinh/MWSLogo.gif" alt="Maxwell Scientific">
@@ -110,6 +119,7 @@
         </i>
     </div>
 
+     <div style="clear: both;"></div>
 </body>
 
 </html>
